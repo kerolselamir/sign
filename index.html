@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="description" content="description here" />
+   <meta anme="keywords" content="keywords ,65 key for seo" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <meta name="author" content="AHMED MENISY" />
+   <title>smart login</title>
+   <!-- Font Awesome  -->
+   <link rel="stylesheet" href="css/all.min.css" />
+   <link rel="stylesheet" href="css/bootstrap.min.css" />
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+
+   <div class="container">
+
+      <div class="signin-signup">
+
+         <form action="" class="sign-in">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+               <i class="fas fa-user"></i>
+               <input type="text" placeholder="Email" id="loginEmail" class="form-control   rounded-pill px-2">
+               
+            </div>
+            <div class="input-field">
+               <i class="fas fa-lock"></i>
+               <img src="images/5188608.png" class="my-pass"onclick="myFunction()" alt="">
+               <input type="password" placeholder="Password" id="loginPassword" class="form-control   rounded-pill px-2">
+               <!-- An element to toggle between password visibility -->
+               <!-- <div class="show-password">
+                  
+               </div> -->
+
+            </div>
+
+
+            <p class="text-danger d-none" id="fillMsg">fill the inputs first</p>
+            <p class="text-danger d-none" id="wrongMsg">your email or password is incorrect</p>
+
+          
+
+            <a class="btn btn-outline-info  mb-3 text-decoration-none" id="loginBtn" onclick="login()">Login</a>
+
+
+            <p class="social-text">Or Siggn in with social platform </p>
+            <div class="socail-media">
+               <a href="#" class="social-icon">
+                  <li class="fab fa-facebook"></li>
+               </a>
+               <a href="#" class="social-icon">
+                  <li class="fab fa-twitter"></li>
+               </a>
+               <a href="#"class="social-icon">
+                  <li class="fab fa-google"></li>
+               </a>
+               <a href="#" class="social-icon">
+                  <li class="fab fa-linkedin-in"></li>
+               </a>
+            </div>
+            <p class="acount-text">Do not have an acount ?<a href="#" class="sign-up-link" onclick="removeMode2()">Sign UP</a> </p>
+         </form>
+
+         <form action="" class="sign-up">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+               <i class="fas fa-user"></i>
+               <input type="text" placeholder="Username" id="usernameInput" oninput="userNameValidation()" class="form-control   rounded-pill px-2">
+            </div>
+            <p id="usernameAlert" class="d-none text-danger">include at least 3 letters , second name is optional</p>
+
+            <div class="input-field">
+               <i class="fas fa-envelope"></i>
+               <input type="text" placeholder="Email" id="userEmailInput" oninput="userEmailValidation()" class="form-control   rounded-pill px-2">
+            </div>
+            <p id="userEmailAlert" class="d-none text-danger">name@example.com</p>
+
+            <div class="input-field">
+               <i class="fas fa-lock"></i>
+               <!-- An element to toggle between password visibility -->
+               <img src="images/5188608.png" class="my-pass"onclick="myFunction2()" alt="">
+               <input type="password" placeholder="Password" id="userPasswordInput" oninput="userPasswordValidation()"class="form-control   rounded-pill px-2">
+          
+
+    
+           
+
+            </div>
+            <p id="userPasswordAlert" class="d-none text-danger m-0">you must strenth your password, from 5 to 15 characters</p>
+
+            <!-- alerts -->
+
+            <p class="text-danger d-none mb-0" id="nameExistMsg">this Name is exist ! Try another one.</p>
+            <p class="text-danger d-none mb-0" id="accountExistMsg">this account is exist ! Try another one.</p> 
+
+            <p class="text-danger d-none mb-0" id="tryAgainMsg">signUp failed ! Try again</p>
+            <!-- sign up button -->
+
+            <a id="signUpBtn" onclick="signUp()"   class="btn">Sign Up</a>
+            <!-- alert -->
+            <p class="text-success d-none" id="confirmMsg">Success</p>
+
+
+            <p class="social-text">Or Siggn in with social platform </p>
+            <div class="socail-media">
+               <a href="#" class="social-icon">
+                  <li class="fab fa-facebook"></li>
+               </a>
+               <a href="#" class="social-icon">
+                  <li class="fab fa-twitter"></li>
+               </a>
+               <a href="#"class="social-icon">
+                  <li class="fab fa-google"></li>
+               </a>
+               <a href="#" class="social-icon">
+                  <li class="fab fa-linkedin-in"></li>
+               </a>
+            </div>
+            <p class="acount-text">Already have an acount ?<a href="#" class="sign-in-link" onclick="addMode2()">Sign In</a> </p>
+
+         </form>
+
+      </div>
+      <div class="pannels-container">
+         <!-- left panel -->
+         <div class="panel left-panel">
+            <div class="content">
+               <h3>Member of brand?</h3>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus sequi sit, exercitationem ipsum dolore architecto.</p>
+               <button class="btn pb-5 fs-4 text-capitalize" id="sign-in-btn" onclick="removeMode1()">Sign in</button>
+            </div>
+            <img src="images/undraw_mobile_login_re_9ntv.svg" alt="" class="image">
+         </div>
+         <!-- right panel -->
+         <div class="panel right-panel">
+            <div class="content">
+               <h3>New to brand?</h3>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus sequi sit, exercitationem ipsum dolore architecto.</p>
+               <button class="btn pb-5 fs-4 text-capitalize" id="sign-up-btn" onclick="addMode1()">Sign up</button>
+            </div>
+            <img src="images/undraw_online_ad_re_ol62.svg" alt="" class="image">
+         </div>
+      </div>
+   </div>
+
+
+   <script src="./js/main.js"></script>
+</body>
+
+</html>

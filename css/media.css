@@ -1,0 +1,87 @@
+@media screen and (max-width: 950px) {
+
+    .container
+    {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+}
+@media screen and (max-width: 635px) {
+
+    .container::before
+    {
+        display: none;
+    }
+    form
+    {
+        width: 80%;
+    }
+    form.sign-up
+    {
+        display: none;
+    }
+    .pannels-container
+    {
+        display: none;
+    }
+    .container.sign-up-mode2   form.sign-up
+    {
+        display: flex;
+        opacity: 1;
+    }
+    .container.sign-up-mode2   form.sign-in
+    {
+        display: none;
+    }
+    .acount-text
+    {
+       display: inline-block;
+       margin-top: 35px;
+    }
+
+
+    
+}
+
+@media screen and (max-width: 320px) {
+    form
+    {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 850px) and (min-width: 635px) {
+  
+#usernameInput,#userEmailInput,#userPasswordInput,#loginEmail,#loginPassword
+{
+   width: 250px;
+} 
+.my-pass
+{
+   cursor: pointer;
+   width: 20px;
+   position: absolute;
+   margin-top: 33px;
+   margin-left: 180px;
+
+}
+}
+@media screen and (max-width: 1200px) and (min-width: 850px) {
+  
+    #usernameInput,#userEmailInput,#userPasswordInput,#loginEmail,#loginPassword
+    {
+       width: 345px;
+    } 
+    .my-pass
+    {
+       cursor: pointer;
+       width: 20px;
+       position: absolute;
+       margin-top: 33px;
+       margin-left: 280px;
+    
+    }
+    }
+    
